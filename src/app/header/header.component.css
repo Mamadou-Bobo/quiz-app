@@ -4,7 +4,7 @@ body{
 }
 
 .header{
-    width: auto;
+    width: 100vw;
     padding: 8px;
     background-color: #232551;
 }
