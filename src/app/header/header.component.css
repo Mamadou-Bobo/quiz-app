@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    width: auto;
+    padding: 8px;
+    background-color: #232551;
+}
+
+.header h1{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
