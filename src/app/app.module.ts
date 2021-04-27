@@ -10,6 +10,7 @@ import { ButtonComponent } from './button/button.component';
 import { LevelComponent } from './level/level.component';
 import { QuestionsComponent } from './questions/questions.component';
 import { ResultComponent } from './result/result.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ResultComponent } from './result/result.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
