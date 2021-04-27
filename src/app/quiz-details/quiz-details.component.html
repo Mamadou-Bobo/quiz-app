@@ -1,5 +1,5 @@
 <div class="content">
-    <div *ngFor="let quiz of quizCategorie; index as i">
+    <div *ngFor="let quiz of quizCategory; index as i">
         <div id="{{ 'element' + i }}" (click)="setCategoryBackgroundColor(i)" (click)="getCategoryIndex(i)" class="item">{{quiz.name}}</div>
     </div>
 </div>
