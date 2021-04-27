@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { QuizService } from '../services/quiz.service';
 
 @Component({
   selector: 'app-button',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
 
-  constructor() { }
+  isClicked: boolean = false;
+  clickSubscription: Subscription | undefined;
+
+  constructor(private quizService: QuizService) { }
 
   ngOnInit(): void {
+    this.clickSubscription = this.quizService.isClickedSubject.subscribe(
+      (value) => {
+        this.isClicked = value;
+      }
+    )
   }
+
+
 
 }
