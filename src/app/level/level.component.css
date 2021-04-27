@@ -1,0 +1,118 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.level-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 110px;
+    height: 60px;
+
+    background-color: #ccc;
+    color: #000;
+
+    margin: 10px;
+
+    cursor: pointer;
+    transition: .4s;
+}
+
+.item:hover{
+    background-color: #6E73DC;
+    color: #fff;
+}
+
+.btn > div {
+    margin: 10px;
+}
+
+button{
+    width: 200px;
+    height: 40px;
+    
+    background: #232551;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button:disabled{
+    width: 200px;
+    height: 40px;
+    
+    background: #232551b2;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor:default;
+}
+
+@media only screen and (min-width: 250px) {
+    .item{
+        width: 170px;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-top: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 250px) {
+    .item{
+        width: 170px;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 350px) {
+    .item{
+        width: 165px;
+    }
+}
+
+@media only screen and (min-width: 550px) {
+    .btn{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .item{
+        width: 190px;
+    }
+}
