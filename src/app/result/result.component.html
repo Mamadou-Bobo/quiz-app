@@ -1,1 +1,11 @@
-<p>result works!</p>
+<app-header [title]="'Result'"></app-header>
+
+<div class="content">
+    <h1>Réponses correctes : 8</h1>
+    <h1>Réponses incorrectes : 2</h1>
+    <h1>Pourcentage obtenu : 80%</h1>
+</div>
+
+<div class="btn">
+    <app-button [title]="'Restart'" [link]="'/'" [isClicked]="isClicked"></app-button>
+</div>
