@@ -1,5 +1,5 @@
 import { elementEventFullName } from '@angular/compiler/src/view_compiler/view_compiler';
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 import { QuizService } from '../services/quiz.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { QuizService } from '../services/quiz.service';
 })
 export class QuizDetailsComponent implements OnInit {
 
-  quizCategorie: any;
+  quizCategory: any;
   index: number | undefined;
   selectedColor: string = "#6E73DC";
   whiteColor: string = "#ccc";
@@ -17,12 +17,11 @@ export class QuizDetailsComponent implements OnInit {
 
   indexArray: Array<number> = [];
 
-  constructor(private quizService: QuizService) { 
-    
+  constructor(private quizService: QuizService) {    
   }
 
   ngOnInit(): void {
-    this.quizCategorie = this.quizService.quizCategorie;
+    this.quizCategory = this.quizService.quizCategorie;  
   }
 
   setCategoryBackgroundColor(index: number): void {
@@ -62,12 +61,9 @@ export class QuizDetailsComponent implements OnInit {
   }
 
   getCategoryIndex(index: number): void {
-    // console.log(index);
-    // console.log(test);
     this.isClicked = true;
     index += 8;
     this.index = index;
-    // console.log(this.index);
   }
 
 }
