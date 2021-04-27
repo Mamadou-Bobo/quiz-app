@@ -8,6 +8,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { QuizDetailsComponent } from './quiz-details/quiz-details.component';
 import { ButtonComponent } from './button/button.component';
 import { LevelComponent } from './level/level.component';
+import { QuestionsComponent } from './questions/questions.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LevelComponent } from './level/level.component';
     QuizComponent,
     QuizDetailsComponent,
     ButtonComponent,
-    LevelComponent
+    LevelComponent,
+    QuestionsComponent
   ],
   imports: [
     BrowserModule,
