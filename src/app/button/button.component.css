@@ -1,10 +1,10 @@
 .btn{  
-    margin-top: 30%;
+    margin-top: 5%;
     margin-bottom: 20px;
 
     width: 200px;
     height: 40px;
-    background-color: #6E73DC;
+    background-color: #232551;
 
     display: flex;
     justify-content: center;
@@ -14,4 +14,20 @@
 .btn a{
     text-decoration: none;
     color: #fff;
+}
+
+.btn a button{
+    background: none;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn a button:disabled{
+    background: none;
+    color: #bdc3c7;
+    border: none;
+    outline: none;
+    cursor:default;
 }
