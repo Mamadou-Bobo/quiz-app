@@ -9,6 +9,7 @@ import { QuizDetailsComponent } from './quiz-details/quiz-details.component';
 import { ButtonComponent } from './button/button.component';
 import { LevelComponent } from './level/level.component';
 import { QuestionsComponent } from './questions/questions.component';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuestionsComponent } from './questions/questions.component';
     QuizDetailsComponent,
     ButtonComponent,
     LevelComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
