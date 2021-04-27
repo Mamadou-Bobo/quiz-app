@@ -1,0 +1,23 @@
+.container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-30%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (min-width: 250px) {
+    .title h1{
+        font-size: 18px;
+    }
+
+    .question{
+        margin: 20px;
+    }
+    .question p{
+        font-size: 15px;
+    }
+}
