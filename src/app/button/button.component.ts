@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { QuizService } from '../services/quiz.service';
 
@@ -19,7 +19,7 @@ export class ButtonComponent implements OnInit {
       (value) => {
         this.isClicked = value;
       }
-    )
+    );
   }
 
 
