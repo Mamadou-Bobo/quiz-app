@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionsComponent implements OnInit {
 
+  isClicked: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.isClicked = true;
   }
 
 }
