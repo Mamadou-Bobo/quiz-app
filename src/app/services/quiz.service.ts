@@ -10,6 +10,21 @@ export class QuizService {
 
   isClickedSubject = new Subject<boolean>();
 
+  quizLevel: any = [
+    {
+      name : 'Any Difficulty'
+    },
+    {
+      name : 'Easy'
+    },
+    {
+      name : 'Medium'
+    },
+    {
+      name : 'Hard'
+    }
+  ]
+
   quizCategorie: any = [
     {
       name: 'Any Category'
