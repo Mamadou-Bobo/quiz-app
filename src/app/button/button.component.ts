@@ -11,6 +11,7 @@ export class ButtonComponent implements OnInit {
 
   @Input() link: string = "level";
   @Input() isClicked: boolean = false;
+  @Input() title: string = "Next";
   clickSubscription: Subscription | undefined;
 
   constructor(private quizService: QuizService) { }
