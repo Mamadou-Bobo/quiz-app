@@ -10,7 +10,7 @@ import { QuizService } from '../services/quiz.service';
 export class ButtonComponent implements OnInit {
 
   @Input() link: string = "level";
-  isClicked: boolean = false;
+  @Input() isClicked: boolean = false;
   clickSubscription: Subscription | undefined;
 
   constructor(private quizService: QuizService) { }
