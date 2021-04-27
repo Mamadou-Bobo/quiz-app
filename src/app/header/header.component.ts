@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() title: string = "Bienvenue dans Quiz App";
+  @Input() title: string = "Challenge your self";
 
   constructor() { }
 
