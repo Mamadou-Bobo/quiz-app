@@ -1,32 +1,26 @@
-.btn{  
-    margin-top: 5%;
-    margin-bottom: 20px;
-
+button{
     width: 200px;
     height: 40px;
-    background-color: #232551;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn a{
-    text-decoration: none;
-    color: #fff;
-}
-
-.btn a button{
-    background: none;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    
+    background: #232551;
     color: #fff;
     border: none;
     outline: none;
     cursor: pointer;
 }
 
-.btn a button:disabled{
-    background: none;
-    color: #bdc3c7;
+button:disabled{
+    width: 200px;
+    height: 40px;
+
+    margin-top: 5%;
+    margin-bottom: 20px;
+    
+    background: #232551b2;
+    color: #fff;
     border: none;
     outline: none;
     cursor:default;
