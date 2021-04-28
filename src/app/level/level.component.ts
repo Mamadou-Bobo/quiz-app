@@ -70,8 +70,7 @@ export class LevelComponent implements OnInit {
 
   getCategoryIndex(index: number): void {
     this.isClicked = true;
-    index += 8;
-    this.index = index;
+    this.quizService.difficulty = this.quizLevel[index].value;
   }
 
 }
