@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
@@ -12,16 +13,20 @@ export class QuizService {
 
   quizLevel: any = [
     {
-      name : 'Any Difficulty'
+      name : 'Any Difficulty',
+      value : ''
     },
     {
-      name : 'Easy'
+      name : 'Easy',
+      value : 'easy'
     },
     {
-      name : 'Medium'
+      name : 'Medium',
+      value : 'medium'
     },
     {
-      name : 'Hard'
+      name : 'Hard',
+      value : 'hard'
     }
   ]
 
@@ -104,10 +109,25 @@ export class QuizService {
 
   ] 
 
-  constructor() { }
+  category: number | undefined;
+  difficulty: string | undefined;
+
+  constructor(private httpClient: HttpClient) { }
 
   emitClicked(): void {
     this.isClickedSubject.next(this.isClicked);
+  }
+
+  getQuestion(category: number | undefined, difficulty: string | undefined): any {
+    if(difficulty === "" && category !== 8) {
+      return this.httpClient.get("https://opentdb.com/api.php?amount=10&category="+category);
+    } else if(difficulty !== "" && category === 8) {
+      return this.httpClient.get("https://opentdb.com/api.php?amount=10&difficulty="+difficulty);
+    } else if(difficulty === "" && category === 8) {
+      return this.httpClient.get("https://opentdb.com/api.php?amount=10");
+    }else {
+      return this.httpClient.get("https://opentdb.com/api.php?amount=10&category="+category+"&difficulty="+difficulty);
+    }
   }
 
 }
