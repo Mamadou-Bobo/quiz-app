@@ -63,7 +63,7 @@ export class QuizDetailsComponent implements OnInit {
   getCategoryIndex(index: number): void {
     this.isClicked = true;
     index += 8;
-    this.index = index;
+    this.quizService.category = index;
   }
 
 }
